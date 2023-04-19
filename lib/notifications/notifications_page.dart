@@ -21,13 +21,13 @@ class MyScrean extends StatelessWidget {
   const MyScrean({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: const Color.fromRGBO(255, 248, 229, 1),
+    return const Scaffold(
+        backgroundColor: Color.fromRGBO(255, 248, 229, 1),
         body: Center(
             child: Column(
           children: [
-            const NotificationPattern('какая-то задача'),
-            const NotificationPattern('какая-то задача')
+            NotificationPattern('какая-то задача'),
+            NotificationPattern('какая-то задача')
           ],
         )));
   }
