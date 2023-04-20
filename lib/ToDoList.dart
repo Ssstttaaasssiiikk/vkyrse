@@ -32,22 +32,34 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPage extends State<MainPage> {
+  List<Widget> todo = [];
+
+  /*@override
+  void initState() {
+    super.initState();
+
+    todo.add(Tusk().Mew());
+  }*/
+
   int creatusk() {
-    runApp(new Tusk().Mew());
+    setState(() {
+      todo.add(Tusk().Mew());
+    });
     return 1;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[],
-        ),
+      body: ListView.builder(
+        itemCount: todo.length,
+        itemBuilder: (BuildContext context, int index) {
+          return todo[index];
+        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: creatusk,
