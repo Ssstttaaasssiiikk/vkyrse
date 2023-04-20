@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.4
+  table_calendar: ^3.0.0
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
@@ -25,9 +27,9 @@ flutter:
       - asset: fonts/GoogleSans-Italic.ttf
         style: italic
       - asset: fonts/GoogleSans-Bold.ttf
-        weight: 700
+        weight: bold
       - asset: fonts/GoogleSans-Medium.ttf
-        weight: 700
+        weight: medium
   assets:
     - assets/images/
 
