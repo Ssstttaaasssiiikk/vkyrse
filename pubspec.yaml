@@ -1,0 +1,34 @@
+name: vkyrse
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Google Sans
+      fonts:
+      - asset: fonts/GoogleSans-Regular.ttf
+      - asset: fonts/GoogleSans-Italic.ttf
+        style: italic
+      - asset: fonts/GoogleSans-Bold.ttf
+        weight: 700
+      - asset: fonts/GoogleSans-Medium.ttf
+        weight: 700
+  assets:
+    - assets/images/
+
+
