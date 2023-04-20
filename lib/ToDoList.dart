@@ -34,20 +34,6 @@ class MainPage extends StatefulWidget {
 class _MainPage extends State<MainPage> {
   List<Widget> todo = [];
 
-  /*@override
-  void initState() {
-    super.initState();
-
-    todo.add(Tusk().Mew());
-  }*/
-
-  int creatusk() {
-    setState(() {
-      todo.add(Tusk().Mew());
-    });
-    return 1;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
