@@ -42,18 +42,16 @@ class _TimeTablePage extends State<TimeTablePage>{
       child: Column(
         children: [
           Text(DateFormat.yMMMMd().format(today), style: AppTextStyles.headerTextStyle),
-          Container(
-            child: TableCalendar(
-              // locale: 'ru_RU',
-              rowHeight: 4*AppConstants.defaultPadding,
-              headerStyle: const HeaderStyle(formatButtonVisible: false, titleCentered: true),
-              availableGestures: AvailableGestures.all,
-              selectedDayPredicate: (day) => isSameDay(day, today),
-              focusedDay: today,
-              firstDay: DateTime.utc(2022, 9, 1),
-              lastDay: DateTime.utc(2023, 7, 4),
-              onDaySelected: _onDaySelected,
-            )
+          TableCalendar(
+            // locale: 'ru_RU',
+            rowHeight: 4*AppConstants.defaultPadding,
+            headerStyle: const HeaderStyle(formatButtonVisible: false, titleCentered: true),
+            availableGestures: AvailableGestures.all,
+            selectedDayPredicate: (day) => isSameDay(day, today),
+            focusedDay: today,
+            firstDay: DateTime.utc(2022, 9, 1),
+            lastDay: DateTime.utc(2023, 7, 4),
+            onDaySelected: _onDaySelected,
           ),
         ]
       ),
