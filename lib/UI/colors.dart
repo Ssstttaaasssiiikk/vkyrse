@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class MyColors{
   // All yellow elements (AppBar, BottomBar etc.) uses primaryYellow
   static const Color primaryYellow = Color.fromRGBO(255, 184, 0, 1);
