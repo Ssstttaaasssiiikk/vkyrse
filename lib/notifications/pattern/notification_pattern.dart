@@ -17,8 +17,7 @@ class NotificationPattern extends StatelessWidget {
       SizedBox(height: MediaQuery.of(context).size.width * 0.03),
       Container(
           decoration: BoxDecoration(
-              color: MyColors.lightYellow,
-              borderRadius: BorderRadius.circular(20)),
+              color: MyColors.white, borderRadius: BorderRadius.circular(20)),
           width: MediaQuery.of(context).size.width - 20,
           child: Column(children: [
             const SizedBox(height: 10),
@@ -30,7 +29,7 @@ class NotificationPattern extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.04,
                       width: MediaQuery.of(context).size.width * 0.9,
                       decoration: BoxDecoration(
-                          color: MyColors.darkYellow,
+                          color: MyColors.primaryYellow,
                           borderRadius: BorderRadius.circular(15)),
                       child: Text(
                         randomWord,
@@ -45,7 +44,7 @@ class NotificationPattern extends StatelessWidget {
               Text(
                 softWrap: true,
                 task,
-                style: const TextStyle(fontSize: 20, color: MyColors.black),
+                style: const TextStyle(fontSize: 20, color: MyColors.myBlack),
               )
             ]),
             SizedBox(height: MediaQuery.of(context).size.height * 0.02),
@@ -54,7 +53,7 @@ class NotificationPattern extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.043,
                 width: MediaQuery.of(context).size.width * 0.4,
                 decoration: BoxDecoration(
-                    color: MyColors.brown,
+                    color: Colors.brown,
                     borderRadius: BorderRadius.circular(15)),
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -62,11 +61,10 @@ class NotificationPattern extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.06,
                   ),
                   const Text('Выполнена',
-                      style: TextStyle(color: MyColors.lightYellow)),
+                      style: TextStyle(color: MyColors.white)),
                   IconButton(
                       onPressed: () {},
-                      icon:
-                          const Icon(Icons.check, color: MyColors.lightYellow))
+                      icon: const Icon(Icons.check, color: MyColors.white))
                 ]),
               )
             ]),

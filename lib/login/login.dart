@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vkyrse/news/news_page.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -21,7 +22,7 @@ class LoginPage extends StatelessWidget {
         children: <Widget>[
           SizedBox(height: MediaQuery.of(context).size.height * 0.11),
           const Image(
-            image: AssetImage('assets/1.png'),
+            image: AssetImage('assets/images/1.png'),
             height: 350,
             width: 450,
           ),
@@ -38,10 +39,16 @@ class LoginPage extends StatelessWidget {
                 children: [
                   SizedBox(height: MediaQuery.of(context).size.height * 0.025),
                   const Text('Здравствуй!',
-                      style: TextStyle(color: Colors.white, fontSize: 36)),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 36,
+                          fontFamily: "Google Sans")),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.035),
                   const Text('Для того чтобы продолжить\nвведите номер группы',
-                      style: TextStyle(color: Colors.white, fontSize: 22),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontFamily: "Google Sans"),
                       textAlign: TextAlign.center),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.050),
                   SizedBox(
@@ -61,7 +68,10 @@ class LoginPage extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.08,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, "/notifications");
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const NewsPage()));
                         },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
