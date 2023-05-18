@@ -5,14 +5,9 @@ class Notifications extends StatelessWidget {
   const Notifications({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         home: Scaffold(
-      appBar: AppBar(
-          elevation: 0,
-          backgroundColor:
-              const Color.fromRGBO(255, 197, 51, 1), //вынести в отдельный класс
-          title: const Center(child: Text('Уведомления'))),
-      body: const MyScrean(),
+      body: MyScrean(),
     ));
   }
 }
