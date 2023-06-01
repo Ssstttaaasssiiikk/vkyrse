@@ -19,13 +19,6 @@ class ToDoItem extends StatelessWidget {
         margin: const EdgeInsets.only(left: 10, right: 10, bottom: 15),
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15)),
-            boxShadow: [
-              (BoxShadow(
-                offset: Offset(0, 20),
-                blurRadius: 20,
-                color: Color.fromARGB(50, 29, 29, 29),
-              ))
-            ],
             color: Colors.white),
         child: ListTile(
           contentPadding: const EdgeInsets.only(right: 7, left: 15),

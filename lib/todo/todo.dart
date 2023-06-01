@@ -26,7 +26,7 @@ class _ToDo extends State<ToDo> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          scaffoldBackgroundColor: MyColors.backGroundColor,
+          scaffoldBackgroundColor: MyColors.myGrey,
           textTheme: Theme.of(context)
               .textTheme
               .apply(bodyColor: MyColors.myBlack, fontFamily: "Google Sans"),
@@ -52,58 +52,54 @@ class _ToDo extends State<ToDo> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Row(children: [
-                Expanded(
-                    child: Container(
-                  margin:
-                      const EdgeInsets.only(bottom: 20, right: 10, left: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: const [
-                      (BoxShadow(
-                          offset: Offset(0, 0),
-                          blurRadius: 10,
-                          spreadRadius: 0.0,
-                          color: Colors.grey))
-                    ],
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: TextField(
-                    controller: _todoController,
-                    decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.only(left: 10),
-                        prefixIconConstraints:
-                            BoxConstraints(maxHeight: 20, minWidth: 25),
-                        border: InputBorder.none,
-                        hintText: "Add new task",
-                        hintStyle: TextStyle(
-                          color: Color.fromRGBO(29, 29, 29, 0.5),
-                          fontFamily: "Google Sans",
-                          fontSize: 18,
-                        )),
-                  ),
-                )),
-                Container(
-                    margin: const EdgeInsets.only(bottom: 20, right: 20),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        _addToDoItem(_todoController.text);
-                      },
-                      style: ElevatedButton.styleFrom(
-                          primary: Color.fromRGBO(29, 29, 29, 1),
-                          minimumSize: Size(60, 60),
-                          elevation: 10),
-                      child: const Text('+',
-                          style: TextStyle(
-                            fontSize: 40,
-                          )),
-                    ))
-              ]),
+              child: Row(children: [newToDoObjLabel(), addButton()]),
             )
           ],
         ),
       ),
     );
+  }
+
+  Expanded newToDoObjLabel() {
+    return Expanded(
+        child: Container(
+      margin: const EdgeInsets.only(bottom: 20, right: 10, left: 10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: TextField(
+        controller: _todoController,
+        decoration: const InputDecoration(
+            contentPadding: EdgeInsets.only(left: 10),
+            prefixIconConstraints: BoxConstraints(maxHeight: 20, minWidth: 25),
+            border: InputBorder.none,
+            hintText: "Add new task",
+            hintStyle: TextStyle(
+              color: Color.fromRGBO(29, 29, 29, 0.5),
+              fontFamily: "Google Sans",
+              fontSize: 18,
+            )),
+      ),
+    ));
+  }
+
+  Container addButton() {
+    return Container(
+        margin: const EdgeInsets.only(bottom: 20, right: 20),
+        child: ElevatedButton(
+          onPressed: () {
+            _addToDoItem(_todoController.text);
+          },
+          style: ElevatedButton.styleFrom(
+              primary: Color.fromRGBO(29, 29, 29, 1),
+              minimumSize: Size(60, 60),
+              elevation: 10),
+          child: const Text('+',
+              style: TextStyle(
+                fontSize: 40,
+              )),
+        ));
   }
 
   void _handlerToDoChange(ToDoObj todo) {
@@ -149,12 +145,6 @@ class _ToDo extends State<ToDo> {
       padding: const EdgeInsets.symmetric(horizontal: 15),
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(15)),
-          boxShadow: [
-            (BoxShadow(
-                offset: Offset(0, 20),
-                blurRadius: 20,
-                color: Color.fromARGB(50, 29, 29, 29)))
-          ],
           color: Colors.white),
       child: TextField(
         onChanged: (value) => _runFilter(value),
