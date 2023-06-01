@@ -43,7 +43,7 @@ class _NewsPage extends State<NewsPage> {
           color: MyColors.myGrey,
           backgroundColor: MyColors.myBlack,
           padding: const EdgeInsets.all(18),
-          tabs: [
+          tabs: const [
             GButton(icon: Icons.home, text: 'новости'),
             GButton(icon: Icons.calendar_month, text: 'расписание'),
             GButton(icon: Icons.list_alt, text: 'задачи'),

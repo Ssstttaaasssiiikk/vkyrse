@@ -24,12 +24,6 @@ class NewsPost extends StatelessWidget {
         width: size!.width - 2 * AppConstants.defaultPadding,
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15)),
-            // boxShadow: [
-            //   (BoxShadow(
-            //       offset: Offset(0, 20),
-            //       blurRadius: 20,
-            //       color: Color.fromARGB(50, 29, 29, 29)))
-            // ],
             color: Colors.white),
         margin: const EdgeInsets.only(
             left: AppConstants.defaultPadding,
