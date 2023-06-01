@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:vkyrse/news/patterns/body.dart';
+import '../ToDo/todo.dart';
 import '../UI/colors.dart';
-import '../notifications/notifications_page.dart';
 import '../patterns/app_bar.dart';
 import '../timetable/time_table.dart';
-// import '../todo/todo.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({super.key});
@@ -18,8 +17,7 @@ class _NewsPage extends State<NewsPage> {
   final List<Widget> _page = [
     const Body(),
     const TimeTablePage(),
-    // const ToDo(),
-    const Notifications(),
+    const ToDo(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -48,8 +46,7 @@ class _NewsPage extends State<NewsPage> {
           tabs: const [
             GButton(icon: Icons.home, text: 'новости'),
             GButton(icon: Icons.calendar_month, text: 'расписание'),
-            // GButton(icon: Icons.list_alt, text: 'задачи'),
-            GButton(icon: Icons.notifications, text: 'уведомления')
+            GButton(icon: Icons.list_alt, text: 'задачи'),
           ],
           selectedIndex: _index,
           onTabChange: (index) {
