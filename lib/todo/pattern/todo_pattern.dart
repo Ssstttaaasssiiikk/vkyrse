@@ -9,8 +9,7 @@ class ToDoPattern extends StatelessWidget {
       SizedBox(height: MediaQuery.of(context).size.width * 0.03),
       Container(
           decoration: BoxDecoration(
-              color: MyColors.lightYellow,
-              borderRadius: BorderRadius.circular(20)),
+              color: MyColors.white, borderRadius: BorderRadius.circular(20)),
           width: MediaQuery.of(context).size.width - 20,
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,7 +23,7 @@ class ToDoPattern extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.04,
                           width: MediaQuery.of(context).size.width * 0.9,
                           decoration: BoxDecoration(
-                              color: MyColors.darkYellow,
+                              color: MyColors.primaryYellow,
                               borderRadius: BorderRadius.circular(15)),
                           child: const Text(
                             'Лаба по ТВиМС',
@@ -50,8 +49,7 @@ class ToDoPattern extends StatelessWidget {
       SizedBox(height: MediaQuery.of(context).size.width * 0.03),
       Container(
           decoration: BoxDecoration(
-              color: MyColors.lightYellow,
-              borderRadius: BorderRadius.circular(20)),
+              color: MyColors.white, borderRadius: BorderRadius.circular(20)),
           width: MediaQuery.of(context).size.width - 20,
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,7 +63,7 @@ class ToDoPattern extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.04,
                           width: MediaQuery.of(context).size.width * 0.9,
                           decoration: BoxDecoration(
-                              color: MyColors.darkYellow,
+                              color: MyColors.primaryYellow,
                               borderRadius: BorderRadius.circular(15)),
                           child: const Text(
                             'Лаба по ТВиМС',

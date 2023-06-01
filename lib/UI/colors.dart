@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-class MyColors{
+
+class MyColors {
   // All yellow elements (AppBar, BottomBar etc.) uses primaryYellow
   static const Color primaryYellow = Color.fromRGBO(255, 184, 0, 1);
   // All black elements (Main text, Black containers etc.) uses black
@@ -8,4 +9,6 @@ class MyColors{
   static const Color backGroundColor = Color.fromRGBO(240, 230, 224, 1);
   // All white elements (Some text etc.) uses white
   static const Color white = Color.fromRGBO(255, 212, 102, 1);
+  static const Color myBlack = Color.fromRGBO(29, 29, 29, 1);
+  static const Color myGrey = Color.fromRGBO(239, 239, 239, 1);
 }
