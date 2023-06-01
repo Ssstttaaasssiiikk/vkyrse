@@ -3,8 +3,15 @@ import 'package:vkyrse/ToDo/model/todolist.dart';
 
 class ToDoItem extends StatelessWidget {
   final ToDoObj todo;
+  final onToDoChanged; // _handlerToDoChange
+  final onDeleteItem; // _deleteToDoItem
 
-  const ToDoItem({Key? key, required this.todo}) : super(key: key);
+  const ToDoItem(
+      {Key? key,
+      required this.todo,
+      required this.onToDoChanged,
+      required this.onDeleteItem})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +29,14 @@ class ToDoItem extends StatelessWidget {
             color: Colors.white),
         child: ListTile(
           contentPadding: const EdgeInsets.only(right: 7, left: 15),
-          onTap: () {},
+          onTap: () {
+            onToDoChanged(todo);
+          },
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           tileColor: Colors.white,
           leading: Icon(
-            todo.isDone? Icons.check_box:Icons.check_box_outline_blank,
+            todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,
             color: Color.fromRGBO(29, 29, 29, 1),
           ),
           title: Text(todo.todoText!,
@@ -47,7 +56,9 @@ class ToDoItem extends StatelessWidget {
                 color: Colors.white,
                 iconSize: 18,
                 icon: const Icon(Icons.delete),
-                onPressed: () {},
+                onPressed: () {
+                  onDeleteItem(todo.id);
+                },
               )),
         ));
   }
