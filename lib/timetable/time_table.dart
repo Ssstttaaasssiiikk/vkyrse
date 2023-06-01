@@ -27,7 +27,7 @@ class _TimeTablePage extends State<TimeTablePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          scaffoldBackgroundColor: MyColors.backGroundColor,
+          scaffoldBackgroundColor: MyColors.myGrey,
           textTheme: Theme.of(context)
               .textTheme
               .apply(bodyColor: MyColors.myBlack, fontFamily: "Google Sans"),

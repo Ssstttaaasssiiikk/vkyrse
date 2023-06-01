@@ -99,7 +99,7 @@ class NewsPost extends StatelessWidget {
     return ClipRRect(
       borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(15), topRight: Radius.circular(15)),
-      child: Image.asset(imageLocation),
+      child: Image(image: AssetImage(imageLocation)),
     );
   }
 }
