@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vkyrse/UI/colors.dart';
 import 'package:vkyrse/UI/constants.dart';
 
-class Lesson extends StatelessWidget{
+class Lesson extends StatelessWidget {
   const Lesson({
     super.key,
     required this.lessonId,
@@ -25,8 +24,8 @@ class Lesson extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size.width - 2 * AppConstants.defaultPadding,
-      decoration: const BoxDecoration(
+        width: size.width - 2 * AppConstants.defaultPadding,
+        decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15)),
             boxShadow: [
               (BoxShadow(
@@ -35,12 +34,11 @@ class Lesson extends StatelessWidget{
                   color: Color.fromARGB(50, 29, 29, 29)))
             ],
             color: Colors.white),
-      margin: const EdgeInsets.only(
+        margin: const EdgeInsets.only(
             left: AppConstants.defaultPadding,
             right: AppConstants.defaultPadding,
             top: AppConstants.defaultPadding / 2,
             bottom: AppConstants.defaultPadding * 2),
-      child: Column()
-    );
+        child: const Column());
   }
 }

@@ -5,7 +5,7 @@ import '../UI/colors.dart';
 import '../notifications/notifications_page.dart';
 import '../patterns/app_bar.dart';
 import '../timetable/time_table.dart';
-import '../todo/todo.dart';
+// import '../todo/todo.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({super.key});
@@ -18,7 +18,7 @@ class _NewsPage extends State<NewsPage> {
   final List<Widget> _page = [
     const Body(),
     const TimeTablePage(),
-    const ToDo(),
+    // const ToDo(),
     const Notifications(),
   ];
   @override
@@ -48,7 +48,7 @@ class _NewsPage extends State<NewsPage> {
           tabs: const [
             GButton(icon: Icons.home, text: 'новости'),
             GButton(icon: Icons.calendar_month, text: 'расписание'),
-            GButton(icon: Icons.list_alt, text: 'задачи'),
+            // GButton(icon: Icons.list_alt, text: 'задачи'),
             GButton(icon: Icons.notifications, text: 'уведомления')
           ],
           selectedIndex: _index,

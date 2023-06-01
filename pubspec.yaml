@@ -16,6 +16,8 @@ dependencies:
   get: ^4.6.5
   hive_flutter: ^1.1.0
   flutter_slidable: ^3.0.0
+  hive: any
+  
 
 dev_dependencies:
   flutter_test:

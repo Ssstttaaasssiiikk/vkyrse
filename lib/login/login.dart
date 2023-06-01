@@ -5,14 +5,16 @@ class Login extends StatelessWidget {
   const Login({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: LoginPage(),
     );
   }
 }
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,40 +53,48 @@ class LoginPage extends StatelessWidget {
                           fontFamily: "Google Sans"),
                       textAlign: TextAlign.center),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.050),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.85,
-                    height: MediaQuery.of(context).size.height * 0.08,
-                    child: const TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(30))),
-                            filled: true,
-                            fillColor: Color.fromRGBO(239, 239, 239, 1))),
-                  ),
+                  groupNumberInputBox(context),
                   SizedBox(height: MediaQuery.of(context).size.width * 0.035),
-                  SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.60,
-                      height: MediaQuery.of(context).size.height * 0.08,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const NewsPage()));
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            )),
-                        child: const Text('Полетели',
-                            style: TextStyle(fontSize: 22)),
-                      ))
+                  getStartButton(context)
                 ],
               ))),
         ],
       ),
     ));
+  }
+
+  SizedBox getStartButton(BuildContext context) {
+    return SizedBox(
+        width: MediaQuery.of(context).size.width * 0.60,
+        height: MediaQuery.of(context).size.height * 0.08,
+        child: ElevatedButton(
+          onPressed: () {
+            // ignore: unused_local_variable
+            // String groupNum = _controller.text;
+            // getDataFromTimeTable();
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const NewsPage()));
+          },
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              )),
+          child: const Text('Полетели', style: TextStyle(fontSize: 22)),
+        ));
+  }
+
+  SizedBox groupNumberInputBox(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.85,
+      height: MediaQuery.of(context).size.height * 0.08,
+      child: TextField(
+          controller: _controller,
+          decoration: const InputDecoration(
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30))),
+              filled: true,
+              fillColor: Color.fromRGBO(239, 239, 239, 1))),
+    );
   }
 }
