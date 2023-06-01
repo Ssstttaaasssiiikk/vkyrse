@@ -28,7 +28,7 @@ class NewsPost extends StatelessWidget {
               (BoxShadow(
                   offset: Offset(0, 20),
                   blurRadius: 20,
-                  color: MyColors.myGrey))
+                  color: Color.fromARGB(50, 29, 29, 29)))
             ],
             color: Colors.white),
         margin: const EdgeInsets.only(
